@@ -1,6 +1,6 @@
 /*
  * Export From MatTable
- * The exportFromMatTable function is a utility function that enables exporting data from a Material Angular table (`<mat-table>`) into a Comma-Separated Values (CSV) format. 
+ * The ExportFromMatTable function is a utility function that enables exporting data from a Material Angular table (`<mat-table>`) into a Comma-Separated Values (CSV) format. 
  * It retrieves the table headers and rows, converts the data into CSV format, and initiates the file download for the user.
  * Website: https://github.com/suhaibjanjua/export-from-mattable
  * Copyright: (c) 2023 Suhaib Janjua
@@ -13,7 +13,7 @@ try {
         return datestring;
     };
 
-    var exportFromMatTable = new function(matTableSelector, filename) {
+    var ExportFromMatTable = new function(matTableSelector, filename) {
 
         const table = document.querySelector(matTableSelector);
         if (!table) {
@@ -62,3 +62,5 @@ try {
 } catch (err) {
     console.log("Please ignore it...", err);
 }
+
+module.exports = { ExportFromMatTable };

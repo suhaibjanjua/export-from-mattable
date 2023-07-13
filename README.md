@@ -1,6 +1,6 @@
 # export-from-mattable
 
-The exportFromMatTable function is a utility function that enables exporting data from a Material Angular table (`<mat-table>`) into a Comma-Separated Values (CSV) format. It retrieves the table headers and rows, converts the data into CSV format, and initiates the file download for the user.
+The ExportFromMatTable is a utility function that enables exporting data from a Material Angular table (`<mat-table>`) into a Comma-Separated Values (CSV) format. It retrieves the table headers and rows, converts the data into CSV format, and initiates the file download for the user.
 
 Parameters:
 
@@ -9,7 +9,7 @@ filename (string): The desired filename for the exported CSV file.
 
 Usage:
 
-Pass the filename parameter to the exportFromMatTable function to specify the filename for the exported file. The function will retrieve the data from the `<mat-table>` structure, including the headers and rows. The data will be converted into CSV format, with values separated by commas and rows separated by new lines. The CSV file will be created, and the user will be prompted to download it with the specified filename.
+Pass the filename parameter to the ExportFromMatTable function to specify the filename for the exported file. The function will retrieve the data from the `<mat-table>` structure, including the headers and rows. The data will be converted into CSV format, with values separated by commas and rows separated by new lines. The CSV file will be created, and the user will be prompted to download it with the specified filename.
 
 Note:
 
@@ -18,11 +18,11 @@ The function is designed to work in a browser environment with access to the Doc
 
 Example Usage:
 
-You can call the exportFromMatTable function like this:
+You can call the ExportFromMatTable function like this:
 ```
 const matTableSelector = '#myMatTable';
 const filename = 'Export HTML Data';
 exportMatTableToCSV(matTableSelector, filename);
 ```
 
-In this example, the exportFromMatTable function is called with the filename parameter set to 'Export HTML Data', resulting in the export of the Mat table data into a CSV file named `Export HTML Data - Thu Jul 13 2023 15_42_45.csv`.
+In this example, the ExportFromMatTable function is called with the filename parameter set to 'Export HTML Data', resulting in the export of the Mat table data into a CSV file named `Export HTML Data - Thu Jul 13 2023 15_42_45.csv`.
