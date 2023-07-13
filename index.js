@@ -53,7 +53,7 @@ try {
         // Trigger file download
         const downloadLink = document.createElement('a');
         downloadLink.href = csvURL;
-        downloadLink.download = `${filename + "-" + utc(new Date())}.csv`;
+        downloadLink.download = `${filename + " - " + utc(new Date())}.csv`;
         downloadLink.style.display = 'none';
         document.body.appendChild(downloadLink);
         downloadLink.click();

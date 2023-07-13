@@ -4,6 +4,7 @@ The exportFromMatTable function is a utility function that enables exporting dat
 
 Parameters:
 
+matTableSelector (string): The id of the desired angular material table from the html you want to export.
 filename (string): The desired filename for the exported CSV file.
 
 Usage:
@@ -17,11 +18,12 @@ The function is designed to work in a browser environment with access to the Doc
 
 Example Usage:
 
-javascript
-Copy code
+You can call the exportFromMatTable function like this:
 ```
-const filename = 'export_from_mattable_data';
-exportFromMatTable(filename);
+const matTableSelector = '#myMatTable';
+const filename = 'Export HTML Data';
+exportMatTableToCSV(matTableSelector, filename);
+
 ```
 
-In this example, the exportFromMatTable function is called with the filename parameter set to 'export_from_mattable_data', resulting in the export of the Mat table data into a CSV file named `export_from_mattable_data.csv`.
+In this example, the exportFromMatTable function is called with the filename parameter set to 'Export HTML Data', resulting in the export of the Mat table data into a CSV file named `Export HTML Data - Thu Jul 13 2023 15_42_45.csv`.
