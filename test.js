@@ -1,3 +1,3 @@
-const exportMatTableToCSV = require('./index');
+const exportFromMatTable = require('./index');
 
-exportMatTableToCSV("ExportFromMatTable");
+exportFromMatTable("ExportFromMatTable");

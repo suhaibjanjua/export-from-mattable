@@ -1,4 +1,4 @@
-function exportMatTableToCSV(filename) {
+function exportFromMatTable(filename) {
     const rows = Array.from(document.querySelectorAll('mat-table mat-row'));
 
     // Extract table headers and remove commas
@@ -35,4 +35,4 @@ function exportMatTableToCSV(filename) {
 }
 
 
-module.exports = exportMatTableToCSV;
+module.exports = exportFromMatTable;
