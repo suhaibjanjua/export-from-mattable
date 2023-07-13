@@ -1,22 +1,29 @@
 {
-  "name": "export-from-mattable",
-  "version": "1.0.0",
-  "description": "export-from-mattable function is a utility function that enables exporting data from an Angular Material table (<mat-table>) into a Comma-Separated Values (CSV) format. ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/suhaibjanjua/export-from-mattable.git"
-  },
-  "author": "Suhaib A. Janjua <suhaib.janjua@gmail.com> (http://www.suhaibjanjua.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/suhaibjanjua/export-from-mattable/issues"
-  },
-  "homepage": "https://github.com/suhaibjanjua/export-from-mattable#readme",
-  "dependencies": {
-    "isomorphic-fetch": "^3.0.0"
-  }
+    "name": "export-from-mattable",
+    "version": "1.0.2",
+    "description": "export-from-mattable function is a utility function that enables exporting data from an Angular Material table (<mat-table>) into a Comma-Separated Values (CSV) format. ",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/suhaibjanjua/export-from-mattable.git"
+    },
+    "keywords": [
+        "export",
+        "html",
+        "csv",
+        "mattable",
+        "export-html-2-csv",
+        "export-from-mattable"
+    ],
+    "author": "Suhaib A. Janjua <suhaib.janjua@gmail.com> (http://www.suhaibjanjua.com/)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/suhaibjanjua/export-from-mattable/issues"
+    },
+    "homepage": "https://github.com/suhaibjanjua/export-from-mattable#readme",
+    "devDependencies": {},
+    "dependencies": {}
 }
