@@ -1,11 +1,9 @@
 /*
- * JS Logger
- * Lightweight JavaScript Logger for the browser and node.
- * It is a perfect logger that supports all browsers.
- * It allows to print color logs with pre-defined 5 levels of logging
- * It has a debug mode in which you can print logs during dev and then set it to false to avoid printing confidential logs during production
- * Website: https://github.com/suhaibjanjua/js-logger
- * Copyright: (c) 2019 Suhaib Janjua
+ * Export From MatTable
+ * The exportFromMatTable function is a utility function that enables exporting data from a Material Angular table (`<mat-table>`) into a Comma-Separated Values (CSV) format. 
+ * It retrieves the table headers and rows, converts the data into CSV format, and initiates the file download for the user.
+ * Website: https://github.com/suhaibjanjua/export-from-mattable
+ * Copyright: (c) 2023 Suhaib Janjua
  * License: MIT
  */
 try {
@@ -15,7 +13,7 @@ try {
         return datestring;
     };
 
-    var exportFromMatTable = function exportFromMatTable(matTableSelector, filename) {
+    var exportFromMatTable = new function(matTableSelector, filename) {
 
         const table = document.querySelector(matTableSelector);
         if (!table) {

@@ -23,7 +23,6 @@ You can call the exportFromMatTable function like this:
 const matTableSelector = '#myMatTable';
 const filename = 'Export HTML Data';
 exportMatTableToCSV(matTableSelector, filename);
-
 ```
 
 In this example, the exportFromMatTable function is called with the filename parameter set to 'Export HTML Data', resulting in the export of the Mat table data into a CSV file named `Export HTML Data - Thu Jul 13 2023 15_42_45.csv`.
