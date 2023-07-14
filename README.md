@@ -5,8 +5,8 @@
 
 Fast and lightweight html TABLE to CSV converter. This package includes two modules:
 
-  * **[ExportFromMatTable](#parser):** A synchronous mat TABLE(`<mat-table>`) to CSV converter written in plain JavaScript. It's fast and simple to use.
-  * **[ExportFromTable](#parser):** A synchronous html TABLE(`<table>`) to CSV converter written in plain js. Really fast and supports large datasets.
+  * **[ExportFromMatTable](#exportfrommattable):** A synchronous mat TABLE(`<mat-table>`) to CSV converter written in plain JavaScript. It's fast and simple to use.
+  * **[ExportFromTable](#exportfromtable):** A synchronous html TABLE(`<table>`) to CSV converter written in plain js. Really fast and supports large datasets.
 
 
 ### Features
