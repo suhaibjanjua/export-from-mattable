@@ -1,7 +1,7 @@
 {
     "name": "export-from-mattable",
-    "version": "1.2.0",
-    "description": "The ExportFromMatTable is a utility function that enables exporting data from an Angular Material table (<mat-table>) into a Comma-Separated Values (CSV) format. ",
+    "version": "1.2.1",
+    "description": "The ExportFromMatTable and ExportFromTable are utility functions that enables exporting data from an Angular Material table (<mat-table>) or a standard table (<table>) into a Comma-Separated Values (CSV) format.",
     "main": "index.min.js",
     "scripts": {
         "build": "babel index.js | uglifyjs -o index.min.js",
