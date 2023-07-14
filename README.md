@@ -78,12 +78,11 @@ The `ExportFromMatTable` function assumes the presence of a `<mat-table>` struct
 This module is designed to work in a browser environment with access to the Document Object Model (DOM) APIs (e.g., browser or Node.js).
 
 
-## ExportFromMatTable
+## ExportFromTable
 
-`ExportFromMatTable` can be used programmatically as a synchronous converter.
+`ExportFromTable` can be used programmatically as a synchronous converter.
 
-It retrieves the entire Angular Material Table with the tag (`<mat-table>`) that matches to the param `tableId` to load headers and rows to converts the data into the CSV format, and initiates the file download for the user.
-
+It retrieves the html table (`<table>`) by matching the param `tableId` in the DOM, with the appropriate structure of `<thead>`, `<tbody>`, `<th>`, `<tr>`, and `<td>` elements. `<tfoot>` is not considered while exporting the table to a CSV format.
 
 ### Usage
 

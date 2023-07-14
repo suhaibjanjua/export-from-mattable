@@ -44,7 +44,7 @@ const exportDataToCSV = (filename, headers, data) => {
         console.error('Unable to export data to CSV - ', error);
         return;
     }
-}
+};
 
 export const ExportFromMatTable = (tableId, filename) => {
     const table = document.querySelector(tableId);
