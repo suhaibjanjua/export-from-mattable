@@ -13,11 +13,11 @@ try {
         return datestring;
     };
 
-    var ExportFromMatTable = new function(matTableSelector, filename) {
+    var ExportFromMatTable = function(tableId, filename) {
 
-        const table = document.querySelector(matTableSelector);
+        const table = document.querySelector(tableId);
         if (!table) {
-            console.error(`Table element "${matTableSelector}" not found.`);
+            console.error(`Table element "${tableId}" not found.`);
             return;
         }
 
@@ -35,8 +35,53 @@ try {
 
         // Create a row for the filename
         const filenameRow = Array(headers.length).fill('');
-        const filenameRowIndex = Math.floor(filenameRow.length / 2); // Center column index
-        filenameRow[filenameRowIndex] = filename;
+        // const filenameRowIndex = Math.floor(filenameRow.length / 2); // Center column index
+        filenameRow[0] = filename;
+
+        // Convert to CSV format
+        let csv = '';
+        csv += filenameRow.join(',') + '\n';
+        csv += headers.join(',') + '\n';
+        csv += data.map(row => row.join(',')).join('\n');
+
+        // Create a CSV file
+        const csvBlob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const csvURL = URL.createObjectURL(csvBlob);
+
+        // Trigger file download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = csvURL;
+        downloadLink.download = `${filename + " - " + utc(new Date())}.csv`;
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+
+    var ExportFromTable = function(tableId, filename) {
+
+        const table = document.querySelector(tableId);
+        if (!table) {
+            console.error(`Table element "${tableId}" not found.`);
+            return;
+        }
+
+        if (!filename) { filename = "Export-From-Table"; }
+
+        const rows = Array.from(table.querySelectorAll('tbody tr'));
+
+        // Extract table headers and remove commas
+        const headers = Array.from(table.querySelectorAll('thead th')).map(cell => cell.innerText.replace(/,/g, '').trim());
+
+        // Extract table data and remove commas from cell values
+        const data = rows.map(row => {
+            return Array.from(row.querySelectorAll('td')).map(cell => cell.innerText.replace(/,/g, '').trim());
+        });
+
+        // Create a row for the filename
+        const filenameRow = Array(headers.length).fill('');
+        // const filenameRowIndex = Math.floor(filenameRow.length / 2); // Center column index
+        filenameRow[0] = filename;
 
         // Convert to CSV format
         let csv = '';
@@ -63,4 +108,7 @@ try {
     console.log("Please ignore it...", err);
 }
 
-module.exports = { ExportFromMatTable };
+module.exports = {
+    ExportFromMatTable,
+    ExportFromTable
+};
