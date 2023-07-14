@@ -16,8 +16,14 @@
         "html",
         "csv",
         "mattable",
+        "table",
+        "bootstrap",
+        "bootstrap table",
         "export-html-2-csv",
-        "export-from-mattable"
+        "export-2-csv",
+        "html-2-csv",
+        "export-from-mattable",
+        "export-from-table"
     ],
     "author": "Suhaib A. Janjua <suhaib.janjua@gmail.com> (http://www.suhaibjanjua.com/)",
     "license": "MIT",
